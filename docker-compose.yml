@@ -1,0 +1,39 @@
+version: "3"
+
+services:
+  laravel-backend:
+    build:
+      context: ./laravel-backend
+    volumes:
+      - ./laravel-backend:/var/www/html
+    ports:
+      - 80:80
+    depends_on:
+      - db
+    networks:
+      - my-network
+
+  react-frontend:
+    build:
+      context: ./react-frontend
+    volumes:
+      - ./react-frontend/src:/usr/src/app/src
+    ports:
+      - 3000:3000
+    networks:
+      - my-network
+
+  db:
+    image: mysql:latest
+    ports:
+      - 3308:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: innoscripta
+      MYSQL_DATABASE: innoscripta
+      MYSQL_USER: innoscripta
+      MYSQL_PASSWORD: innoscripta
+    networks:
+      - my-network
+
+networks:
+  my-network:

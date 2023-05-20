@@ -2,28 +2,30 @@ version: "3"
 
 services:
   laravel-backend:
+    container_name: laravel-backend
     build:
       context: ./laravel-backend
-    volumes:
-      - ./laravel-backend:/var/www/html
     ports:
-      - 80:80
+      - 8080:80
     depends_on:
       - db
     networks:
       - my-network
+    restart: on-failure
 
   react-frontend:
+    container_name: react-frontend
     build:
       context: ./react-frontend
     volumes:
       - ./react-frontend/src:/usr/src/app/src
     ports:
-      - 3000:3000
+      - 3000:80
     networks:
       - my-network
 
   db:
+    container_name: db-mysql
     image: mysql:latest
     ports:
       - 3308:3306

@@ -17,7 +17,8 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule): void
     {
-        $schedule->command('news:cron')->everyMinute();
+        info('News Cron Job Running');
+        $schedule->command('news:cron')->everyThirtyMinutes();
     }
 
     /**

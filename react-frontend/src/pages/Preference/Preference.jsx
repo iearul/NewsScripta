@@ -100,7 +100,6 @@ const Home = () => {
   return (
     <>
       <Header />
-      <img src="https://api.nytimes.com/2012/09/26/arts/26papo-1/26papo-1-articleLarge.jpg" alt="ddfdf" />
       <div className="container">
         <div className="row">
           <div className="col-md-9">

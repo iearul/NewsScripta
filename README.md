@@ -1,6 +1,6 @@
 # NewsScripta
 
-NewsScripta is a web application developed as a test task for the Full Stack Engineer position at InnoScripta AG. It is a news aggregator application that fetches news articles from multiple sources and allows users to browse and search for articles based on their preferences.
+NewsScripta is a personal project I undertook as a practice exercise while exploring my skills as a Full Stack Engineer. This web application serves as a news aggregator, pulling in articles from various sources and offering users the ability to effortlessly explore and search for articles tailored to their preferences.
 
 ## Project Structure
 
@@ -49,5 +49,3 @@ To run the project locally, follow these steps:
 ## Feedback and Contact
 
 If you have any questions, feedback, or encounter any issues while running the project, please don't hesitate to reach out.
-
-    Thank you for considering my application!
